@@ -67,7 +67,18 @@ To inject and balance perceptual features across complex production pipelines, m
     *   *Profile:* Long-range relationship tracking [INDEX: 5]. Replaces convolutional backbones with ViT hidden layers [INDEX: 5]. Because transformers exploit global self-attention from layer zero [INDEX: 5], a transformer-based perceptual loss evaluates long-range compositional alignment and contextual layout balance rather than isolated local patch textures [INDEX: 5].
 
 ```mermaid
-Hybrid Perceptual Optimization Matrix┌───────────────────────┐│   Generated Image ŷ   │└───────────┬───────────┘│┌───────────────────────┼───────────────────────┐▼                       ▼                       ▼Pixel-Space Loss       Perceptual Loss Block    Adversarial Loss(L₁ / L₂ Norms)          (Frozen VGG/ViT)      (Dynamic Discriminator)│                       │                       │└───────────────────────┼───────────────────────┘│▼Unified Backpropagation Graph
+flowchart TD
+    subgraph H["Hybrid Perceptual Optimization Matrix"]
+        A["Generated Image ŷ"]
+
+        A --> B["Pixel-Space Loss<br/>(L₁ / L₂ Norms)"]
+        A --> C["Perceptual Loss<br/>(Frozen VGG / ViT Features)"]
+        A --> D["Adversarial Loss<br/>(Dynamic Discriminator)"]
+
+        B --> E["Unified Backpropagation Graph"]
+        C --> E
+        D --> E
+    end
 ```
 
 ---
