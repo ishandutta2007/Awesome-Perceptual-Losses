@@ -40,23 +40,23 @@ flowchart LR
 
 Perceptual loss frameworks are strictly categorized based on the specific layer metrics and statistical correlations they track across the feature extraction graph.
 
-### A. Feature Reconstruction Loss (Content Loss)
-*   **Mechanism:** Measures the direct mean squared error between the hidden layer feature maps ($\phi_l$) of the generated and target images across layer block index $l$:
-    $$\mathcal{L}_{\text{feat}}^{\phi, l}(\hat{y}, y) = \frac{1}{C_l H_l W_l} \|\phi_l(\hat{y}) - \phi_l(y)\|_2^2$$
-*   **Behavior:** Enforces global spatial layout preservation, ensuring that object shapes, positions, and silhouettes match the content target perfectly [INDEX: 11].
+- ### A. Feature Reconstruction Loss (Content Loss)
+	*   **Mechanism:** Measures the direct mean squared error between the hidden layer feature maps ($\phi_l$) of the generated and target images across layer block index $l$:
+	    $$\mathcal{L}_{\text{feat}}^{\phi, l}(\hat{y}, y) = \frac{1}{C_l H_l W_l} \|\phi_l(\hat{y}) - \phi_l(y)\|_2^2$$
+	*   **Behavior:** Enforces global spatial layout preservation, ensuring that object shapes, positions, and silhouettes match the content target perfectly [INDEX: 11].
 
-### B. Style Reconstruction Loss (Gram Matrix Matching)
-*   **Mechanism:** Decouples texture and color from absolute spatial positioning [INDEX: 11]. It computes the statistical correlation between different channel activations within a single layer, generating a **Gram Matrix ($G_l$)** [INDEX: 11]. The loss minimizes the delta between the generated and target Gram matrices across multiple layer depths:
-    $$\mathcal{L}_{\text{style}}^{\phi, l}(\hat{y}, y) = \|G_l(\hat{y}) - G_l(y)\|_F^2$$
-*   **Application:** The mathematical core underpining early neural style transfer and artistic filter mapping pipelines [INDEX: 11].
+- ### B. Style Reconstruction Loss (Gram Matrix Matching)
+	*   **Mechanism:** Decouples texture and color from absolute spatial positioning [INDEX: 11]. It computes the statistical correlation between different channel activations within a single layer, generating a **Gram Matrix ($G_l$)** [INDEX: 11]. The loss minimizes the delta between the generated and target Gram matrices across multiple layer depths:
+	    $$\mathcal{L}_{\text{style}}^{\phi, l}(\hat{y}, y) = \|G_l(\hat{y}) - G_l(y)\|_F^2$$
+	*   **Application:** The mathematical core underpining early neural style transfer and artistic filter mapping pipelines [INDEX: 11].
 
-### C. Total Variation (TV) Regularization
-*   **Mechanism:** A complementary spatial smoothing loss that measures the absolute differences between horizontally and vertically adjacent pixels across the final generated output canvas.
-*   **Pros:** Functions as an explicit high-frequency noise filter, preventing the model from outputting unwanted checkerboard patterns, pixelated artifacts, or salt-and-pepper noise.
+- ### C. Total Variation (TV) Regularization
+	*   **Mechanism:** A complementary spatial smoothing loss that measures the absolute differences between horizontally and vertically adjacent pixels across the final generated output canvas.
+	*   **Pros:** Functions as an explicit high-frequency noise filter, preventing the model from outputting unwanted checkerboard patterns, pixelated artifacts, or salt-and-pepper noise.
 
-### D. Adversarial Perceptual Loss (GAN Discriminator Features)
-*   **Mechanism:** Bypasses static pre-trained networks like VGG completely. It extracts hidden feature representations from the internal layers of an actively training **GAN Discriminator network**.
-*   **Pros:** Creates a highly dynamic, self-evolving perceptual check. As the discriminator improves at catching fakes, its internal feature maps develop a highly custom, task-specific understanding of image realism, driving the generator to synthesize sharp, high-yield details.
+- ### D. Adversarial Perceptual Loss (GAN Discriminator Features)
+	*   **Mechanism:** Bypasses static pre-trained networks like VGG completely. It extracts hidden feature representations from the internal layers of an actively training **GAN Discriminator network**.
+	*   **Pros:** Creates a highly dynamic, self-evolving perceptual check. As the discriminator improves at catching fakes, its internal feature maps develop a highly custom, task-specific understanding of image realism, driving the generator to synthesize sharp, high-yield details.
 
 ---
 
