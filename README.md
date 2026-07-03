@@ -13,7 +13,11 @@ The implementation of feature-space optimization has transitioned from basic pix
 
 
 ```mermaid
-[Pixel-Level Heuristics (MSE/MAE)] ───> [VGG Feature Reconstruction (Johnson, 2016)] ───> [Learned Perceptual Calibration (LPIPS, 2018)] ───> [Multi-Modal CLIP Alignment (2021+)](Blurry, Structurally Weak Textures)       (Deep Convolutional Semantic Matching)            (Data-Driven Human Visual Mimicry)           (Open-Vocabulary Text-Guided Stylization)
+flowchart LR
+    A["Pixel-Level Heuristics (MSE/MAE)<br/>(Blurry, Structurally Weak Reconstructions)"]
+    --> B["VGG Feature Reconstruction (Johnson et al., 2016)<br/>(Deep Convolutional Feature Matching)"]
+    --> C["Learned Perceptual Calibration (LPIPS, 2018)<br/>(Data-Driven Human Perceptual Similarity)"]
+    --> D["Multi-Modal CLIP Alignment (2021+)<br/>(Open-Vocabulary Text-Guided Optimization)"]
 ```
 
 
