@@ -12,7 +12,7 @@ Traditional metrics like Mean Squared Error (MSE) or Mean Absolute Error (MAE) e
 The implementation of feature-space optimization has transitioned from basic pixel-level mathematical matching to multi-layer convolutional networks, learned human preference mappings, and modern text-guided multi-modal latent space alignments.
 
 
-```
+```mermaid
 [Pixel-Level Heuristics (MSE/MAE)] ───> [VGG Feature Reconstruction (Johnson, 2016)] ───> [Learned Perceptual Calibration (LPIPS, 2018)] ───> [Multi-Modal CLIP Alignment (2021+)](Blurry, Structurally Weak Textures)       (Deep Convolutional Semantic Matching)            (Data-Driven Human Visual Mimicry)           (Open-Vocabulary Text-Guided Stylization)
 ```
 
@@ -66,7 +66,7 @@ To inject and balance perceptual features across complex production pipelines, m
 *   **Vision Transformer (ViT) Spatial Feature Anchors**
     *   *Profile:* Long-range relationship tracking [INDEX: 5]. Replaces convolutional backbones with ViT hidden layers [INDEX: 5]. Because transformers exploit global self-attention from layer zero [INDEX: 5], a transformer-based perceptual loss evaluates long-range compositional alignment and contextual layout balance rather than isolated local patch textures [INDEX: 5].
 
-```
+```mermaid
 Hybrid Perceptual Optimization Matrix┌───────────────────────┐│   Generated Image ŷ   │└───────────┬───────────┘│┌───────────────────────┼───────────────────────┐▼                       ▼                       ▼Pixel-Space Loss       Perceptual Loss Block    Adversarial Loss(L₁ / L₂ Norms)          (Frozen VGG/ViT)      (Dynamic Discriminator)│                       │                       │└───────────────────────┼───────────────────────┘│▼Unified Backpropagation Graph
 ```
 
