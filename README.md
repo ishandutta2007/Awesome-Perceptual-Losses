@@ -1,9 +1,16 @@
+<!-- SEO Optimization -->
+<meta name="description" content="A curated list of perceptual losses, feature reconstruction losses, deep neural loss metrics, progressions, and applications in generative AI, style transfer, and super-resolution.">
+<meta name="keywords" content="perceptual loss, neural loss, style transfer, super-resolution, LPIPS, VGG, computer vision, diffusion, PyTorch">
+
 <p align="center">
   <img src="assets/banner.svg" alt="Awesome Perceptual Losses Banner" width="100%">
 </p>
 
 # 🧠 Awesome Perceptual Losses 🚀
 ## Perceptual Losses in AI: History, Progression, Variants, & Applications 🎨
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a> <a href="https://github.com/ishandutta2007/Awesome-Perceptual-Losses/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"/></a> <a href="https://github.com/ishandutta2007/Awesome-Perceptual-Losses/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Perceptual-Losses" alt="License"/></a></p>
 
 A **Perceptual Loss**—alternatively designated as a feature reconstruction loss, deep loss, or neural loss—is an advanced optimization and regularization paradigm in computer vision and generative artificial intelligence. Introduced by Justin Johnson, Alexandre Alahi, and Li Fei-Fei in 2016 ("Perceptual Losses for Real-Time Style Transfer and Super-Resolution"), it fundamentally changed how generative networks assess image similarity [INDEX: 11]. 
 
