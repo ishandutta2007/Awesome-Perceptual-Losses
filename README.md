@@ -1,5 +1,9 @@
-# Awesome-Perceptual-Losses
-## Perceptual Losses in AI: History, Progression, Variants, & Applications
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Perceptual Losses Banner" width="100%">
+</p>
+
+# 🧠 Awesome Perceptual Losses 🚀
+## Perceptual Losses in AI: History, Progression, Variants, & Applications 🎨
 
 A **Perceptual Loss**—alternatively designated as a feature reconstruction loss, deep loss, or neural loss—is an advanced optimization and regularization paradigm in computer vision and generative artificial intelligence. Introduced by Justin Johnson, Alexandre Alahi, and Li Fei-Fei in 2016 ("Perceptual Losses for Real-Time Style Transfer and Super-Resolution"), it fundamentally changed how generative networks assess image similarity [INDEX: 11]. 
 
@@ -7,7 +11,7 @@ Traditional metrics like Mean Squared Error (MSE) or Mean Absolute Error (MAE) e
 
 ---
 
-## 1. The Macro Chronological Evolution
+## ⏳ 1. The Macro Chronological Evolution
 
 The implementation of feature-space optimization has transitioned from basic pixel-level mathematical matching to multi-layer convolutional networks, learned human preference mappings, and modern text-guided multi-modal latent space alignments.
 
@@ -28,7 +32,7 @@ flowchart LR
 
 ---
 
-## 2. Core Functional & Algorithmic Variants
+## ⚙️ 2. Core Functional & Algorithmic Variants
 
 Perceptual loss frameworks are strictly categorized based on the specific layer metrics and statistical correlations they track across the feature extraction graph.
 
@@ -41,7 +45,7 @@ Perceptual loss frameworks are strictly categorized based on the specific layer 
 
 ---
 
-## 3. High-Capacity Architectural Component Types
+## 🏗️ 3. High-Capacity Architectural Component Types
 
 To inject and balance perceptual features across complex production pipelines, modern generative frameworks deploy multi-component loss architectures.
 
@@ -67,7 +71,7 @@ flowchart TD
 
 ---
 
-## 4. Production Engineering Challenges & Hardware Solutions
+## ⚡ 4. Production Engineering Challenges & Hardware Solutions
 
 Enforcing deep feature-space evaluations across high-throughput production training clusters introduces critical computational and memory bottlenecks.
 
@@ -78,7 +82,7 @@ Enforcing deep feature-space evaluations across high-throughput production train
 
 ---
 
-## 5. Frontier Real-World AI Applications
+## 🌐 5. Frontier Real-World AI Applications
 
 | Application | Details & Context | Year | First Paper Link |
 | :--- | :--- | :--- | :--- |
@@ -88,7 +92,7 @@ Enforcing deep feature-space evaluations across high-throughput production train
 
 ---
 
-## References
+## 📚 References
 1. Gatys, L. A., Ecker, A. S., & Bethge, M. (2015). A neural algorithm of artistic style. *arXiv preprint arXiv:1508.06576* [INDEX: 11].
 2. Johnson, J., Alahi, A., & Fei-Fei, L. (2016). Perceptual losses for real-time style transfer and super-resolution. *European Conference on Computer Vision (ECCV)*, 694-711 [INDEX: 11].
 3. Ledig, C., et al. (2017). Photo-realistic single image super-resolution using a generative adversarial network. *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)*, 4681-4690.

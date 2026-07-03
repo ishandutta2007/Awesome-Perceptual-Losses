@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0813" />
+      <stop offset="50%" stop-color="#190e2b" />
+      <stop offset="100%" stop-color="#0b0813" />
+    </linearGradient>
+    
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="50%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      .node {
+        animation: float 4s ease-in-out infinite;
+      }
+      .node-delayed {
+        animation: float 6s ease-in-out infinite;
+        animation-delay: 2s;
+      }
+      .conn-line {
+        stroke-dasharray: 8 8;
+        animation: dash 12s linear infinite;
+      }
+      .glowing-text {
+        font-family: 'Outfit', 'Inter', 'Segoe UI', system-ui, sans-serif;
+        font-weight: 800;
+        text-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px) scale(1); opacity: 0.8; }
+        50% { transform: translateY(-12px) scale(1.1); opacity: 1; }
+      }
+      @keyframes dash {
+        to { stroke-dashoffset: -100; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="320" fill="url(#bg-grad)" rx="16" />
+
+  <!-- Animated Neural Network Net -->
+  <g stroke="rgba(168, 85, 247, 0.15)" stroke-width="1.5">
+    <line x1="100" y1="60" x2="250" y2="100" class="conn-line" />
+    <line x1="250" y1="100" x2="200" y2="240" class="conn-line" />
+    <line x1="200" y1="240" x2="100" y2="60" class="conn-line" />
+    <line x1="250" y1="100" x2="400" y2="120" class="conn-line" />
+    <line x1="400" y1="120" x2="350" y2="260" class="conn-line" />
+    <line x1="200" y1="240" x2="350" y2="260" class="conn-line" />
+    <line x1="800" y1="80" x2="900" y2="200" class="conn-line" />
+    <line x1="900" y1="200" x2="750" y2="250" class="conn-line" />
+    <line x1="750" y1="250" x2="800" y2="80" class="conn-line" />
+    <line x1="600" y1="220" x2="750" y2="250" class="conn-line" />
+  </g>
+
+  <!-- Glowing Nodes -->
+  <g fill="#a855f7" filter="url(#glow)">
+    <circle cx="100" cy="60" r="6" class="node" />
+    <circle cx="250" cy="100" r="8" class="node-delayed" />
+    <circle cx="200" cy="240" r="7" class="node" />
+    <circle cx="400" cy="120" r="5" class="node-delayed" />
+    <circle cx="350" cy="260" r="9" class="node" />
+    <circle cx="800" cy="80" r="7" class="node" />
+    <circle cx="900" cy="200" r="8" class="node-delayed" />
+    <circle cx="750" cy="250" r="6" class="node" />
+  </g>
+
+  <!-- Title Text -->
+  <text x="50%" y="150" fill="url(#text-grad)" font-size="46" text-anchor="middle" class="glowing-text">AWESOME PERCEPTUAL LOSSES</text>
+  <text x="50%" y="195" fill="#94a3b8" font-size="18" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="400" letter-spacing="2">Curated Deep Feature-Space Optimization &amp; Neural Metrics</text>
+
+  <!-- Bottom Accent Line -->
+  <rect x="250" y="230" width="500" height="3" rx="1.5" fill="url(#text-grad)" opacity="0.6" />
+</svg>
